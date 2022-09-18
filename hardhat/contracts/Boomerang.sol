@@ -119,9 +119,9 @@ contract Boomerang is ERC2771Recipient {
         }); // approve
 
         Call memory call = Call({to: to, data: data});
-        Call[] memory theCall = new Call[](2);
+        Call[] memory theCall = new Call[](1);
         theCall[0] = app;
-        theCall[1] = call;
+        
 
         IInterchainAccountRouter(interchainRouter).dispatch(
             mumbaiDomain,
